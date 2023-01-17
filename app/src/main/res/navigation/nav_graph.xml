@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="@string/purchase_pass_fragment_label"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.credadevs.conveyance.Fragments.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_passFragment2"
+            app:destination="@id/passFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/passFragment2"
+        android:name="com.credadevs.conveyance.Fragments.PassFragment"
+        android:label="@string/owned_pass_fragment_label"
+        tools:layout="@layout/fragment_pass" >
+        <action
+            android:id="@+id/action_passFragment2_to_ownedPassesFragment"
+            app:destination="@id/ownedPassesFragment" />
+        <action
+            android:id="@+id/action_passFragment2_to_purchasePassFragment"
+            app:destination="@id/purchasePassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchasePassFragment"
+        android:name="com.credadevs.conveyance.Fragments.PurchasePassFragment"
+        android:label="Purchase Pass Fragment"
+        tools:layout="@layout/fragment_purchase_pass" />
+    <fragment
+        android:id="@+id/ownedPassesFragment"
+        android:name="com.credadevs.conveyance.Fragments.OwnedPassesFragment"
+        android:label="fragment_owned_passes"
+        tools:layout="@layout/fragment_owned_passes" />
+</navigation>

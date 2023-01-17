@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Conveyance</string>
     <string name="api_key">AIzaSyANAbVE7mL32wUKcWqHTIPyb4vXtbGAPvo</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_location_permission">Request Location Permission</string>
+    <string name="text_location_permission">We collect your location to set your starting location, give you the best routes from your location, calculate duration of travel, and implement many other features.
+    Your location will not be stored on our servers.</string>
+    <string name="search">Search...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="purchase_pass_fragment_label">Purchase Pass Section</string>
+    <string name="owned_pass_fragment_label">Owned Passes Section</string>
 </resources>
