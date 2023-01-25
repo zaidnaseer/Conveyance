@@ -5,7 +5,7 @@
     android:id="@+id/LinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.PassFragment">
+    tools:context=".Fragments.TicketFragment">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -19,13 +19,13 @@
             android:id="@+id/ownedTab"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Owned Passes" />
+            android:text="Owned Tickets" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/purchaseTab"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Purchase Passes" />
+            android:text="Purchase Tickets" />
 
     </com.google.android.material.tabs.TabLayout>
 

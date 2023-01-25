@@ -18,6 +18,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.credadevs.conveyance.R;
@@ -98,9 +100,22 @@ public class PurchasePassFragment extends Fragment {
 
         TextView busCodeInput = requireView().findViewById(R.id.busCodeInput);
 
+//        RadioGroup radioGroup = (RadioGroup) requireView().findViewById(R.id.radioGroup);
+//        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+//        {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                // checkedId is the RadioButton selected
+//                if(checkedId == R.id.busCodeRadioButton){
+//
+//                }
+//            }
+//        });
 
-        // initialize array list
+
+                // initialize array list
         ArrayList<String> arrayList = new ArrayList<>(Arrays.asList("300", "500", "3"));
+
 
 
         busCodeInput.setOnClickListener(new View.OnClickListener() {
@@ -163,6 +178,8 @@ public class PurchasePassFragment extends Fragment {
             }
 
         });
+
+
     }
 }
 //        RecyclerViewCustomAdapter ad = new RecyclerViewCustomAdapter(arr);

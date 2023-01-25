@@ -11,19 +11,19 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.credadevs.conveyance.R;
-import com.credadevs.conveyance.databinding.FragmentPassBinding;
-import com.credadevs.conveyance.PassViewPagerAdapter;
+import com.credadevs.conveyance.TicketViewPagerAdapter;
+import com.credadevs.conveyance.databinding.FragmentTicketBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PassFragment#newInstance} factory method to
+ * Use the {@link TicketFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PassFragment extends Fragment {
+public class TicketFragment extends Fragment {
 
-    FragmentPassBinding binding;
+    FragmentTicketBinding binding;
     ViewPager2 viewPager2;
     TabLayout tabLayout;
 
@@ -36,7 +36,7 @@ public class PassFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PassFragment() {
+    public TicketFragment() {
         // Required empty public constructor
     }
 
@@ -49,8 +49,8 @@ public class PassFragment extends Fragment {
      * @return A new instance of fragment PassFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PassFragment newInstance(String param1, String param2) {
-        PassFragment fragment = new PassFragment();
+    public static TicketFragment newInstance(String param1, String param2) {
+        TicketFragment fragment = new TicketFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -83,40 +83,19 @@ public class PassFragment extends Fragment {
 
         tabLayout = view.findViewById(R.id.tabLayout);
         viewPager2 = view.findViewById(R.id.viewPager2);
-        PassViewPagerAdapter PassViewPagerAdapter = new PassViewPagerAdapter(this);
-        viewPager2.setAdapter(PassViewPagerAdapter);
+        TicketViewPagerAdapter TicketViewPagerAdapter = new TicketViewPagerAdapter(this);
+        viewPager2.setAdapter(TicketViewPagerAdapter);
 
         new TabLayoutMediator(tabLayout, viewPager2,
                 (tab, position) -> {
-            if (position==0) {
-                tab.setText("Owned Passes");
-            }
-            else{
-                tab.setText("Purchase Pass");
-            }
-        }
+                    if (position==0) {
+                        tab.setText("Owned Tickets");
+                    }
+                    else{
+                        tab.setText("Purchase Tickets");
+                    }
+                }
         ).attach();
-
-
-
-
-//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-//            @Override
-//            public void onTabSelected(TabLayout.Tab tab) {
-//                viewPager2.setCurrentItem(tab.getPosition());
-//
-//            }
-//
-//            @Override
-//            public void onTabUnselected(TabLayout.Tab tab) {
-//
-//            }
-//
-//            @Override
-//            public void onTabReselected(TabLayout.Tab tab) {
-//
-//            }
-//        });
 
     }
 
@@ -124,8 +103,8 @@ public class PassFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pass, container, false);
-//        binding = FragmentPassBinding.inflate(inflater, container, false);
+        return inflater.inflate(R.layout.fragment_ticket, container, false);
+//        binding = FragmentTicketBinding.inflate(inflater, container, false);
 //        return binding.getRoot();
     }
 }

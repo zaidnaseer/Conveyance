@@ -7,9 +7,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.credadevs.conveyance.Fragments.OwnedPassesFragment;
 import com.credadevs.conveyance.Fragments.PurchasePassFragment;
 
-public class myViewPagerAdapter extends FragmentStateAdapter {
+public class PassViewPagerAdapter extends FragmentStateAdapter {
 
-    public myViewPagerAdapter(@NonNull Fragment fragment) {
+    public PassViewPagerAdapter(@NonNull Fragment fragment) {
         super(fragment);
     }
 

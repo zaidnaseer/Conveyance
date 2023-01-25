@@ -55,26 +55,7 @@ public class MapsFragment extends Fragment {
 
             checkAndRequestPermissions();
 
-            mActivity = requireActivity();
-            if (ContextCompat.checkSelfPermission(requireContext(),
-                    Manifest.permission.ACCESS_FINE_LOCATION)
-                    == PackageManager.PERMISSION_GRANTED
-                    || ContextCompat.checkSelfPermission(requireContext(),
-                    Manifest.permission.ACCESS_COARSE_LOCATION)
-                    == PackageManager.PERMISSION_GRANTED){
-                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(mActivity);
-                fusedLocationProviderClient.getLastLocation()
-                        .addOnSuccessListener(mActivity, new OnSuccessListener<Location>() {
-                            @Override
-                            public void onSuccess(Location location) {
-                                if (location != null) {
-                                    LatLng mLatLng = new LatLng(location.getLatitude(), location.getLongitude());
-                                    googleMap.moveCamera(CameraUpdateFactory
-                                            .newLatLngZoom(mLatLng, 15.0f));
-                                }
-                            }
-                        });
-            }
+
 
         }
 
